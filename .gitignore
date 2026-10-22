@@ -1,22 +1,17 @@
-/node_modules
+node_modules/
+.next/
+/out/
+*.log
+.env
+.env.*
+!.env.example
+/AGENTS.md
+
+# Local runtime files from the previous application
+/vendor/
+/storage/
+/public/css/
+/public/js/
+/public/mix-manifest.json
 /public/hot
 /public/storage
-/storage/*.key
-/vendor
-/.idea
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-.env
-.phpunit.result.cache
-important
-_ide_helper.php
-storage
-.phpstorm.meta.php
-
-# Generated Laravel Mix output
-/public/css
-/public/js
-/public/mix-manifest.json
-.editorconfig
