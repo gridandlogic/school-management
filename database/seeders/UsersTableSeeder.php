@@ -29,7 +29,7 @@ class UsersTableSeeder extends Seeder
 
         $d = [
 
-            ['name' => 'CJ Inspired',
+            ['name' => 'Alex Carter',
                 'email' => 'cj@cj.com',
                 'username' => 'cj',
                 'password' => $password,
@@ -38,7 +38,7 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Admin KORA',
+            ['name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => $password,
             'user_type' => 'admin',
@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
             'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Teacher Chike',
+            ['name' => 'James Wilson',
                 'email' => 'teacher@teacher.com',
                 'user_type' => 'teacher',
                 'username' => 'teacher',
@@ -56,7 +56,7 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Parent Kaba',
+            ['name' => 'Olivia Martin',
                 'email' => 'parent@parent.com',
                 'user_type' => 'parent',
                 'username' => 'parent',
@@ -65,7 +65,7 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => Str::random(10),
             ],
 
-            ['name' => 'Accountant Jeff',
+            ['name' => 'Emily Brooks',
                 'email' => 'accountant@accountant.com',
                 'user_type' => 'accountant',
                 'username' => 'accountant',
@@ -81,12 +81,18 @@ class UsersTableSeeder extends Seeder
     {
         $data = [];
         $user_type = Qs::getAllUserTypes(['super_admin', 'librarian', 'student']);
+        $englishNames = [
+            'admin' => ['Ethan Miller', 'Mason Thomas', 'Lucas Clark'],
+            'teacher' => ['Charlotte Davis', 'Grace Jackson', 'Sophie Lewis'],
+            'parent' => ['Amelia Thompson', 'Ella Harris', 'Ava Walker'],
+            'accountant' => ['Noah Anderson', 'Logan White', 'Benjamin Robinson'],
+        ];
 
         for($i = 1; $i <= $count; $i++){
 
             foreach ($user_type as $k => $ut){
 
-                $data[] = ['name' => ucfirst($user_type[$k]).' '.$i,
+                $data[] = ['name' => $englishNames[$ut][$i - 1] ?? ('English User '.$i),
                     'email' => $user_type[$k].$i.'@'.$user_type[$k].'.com',
                     'user_type' => $user_type[$k],
                     'username' => $user_type[$k].$i,

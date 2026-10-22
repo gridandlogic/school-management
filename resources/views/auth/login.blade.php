@@ -10,14 +10,14 @@
             <div class="content d-flex justify-content-center align-items-center">
 
                 <!-- Login card -->
-                <form class="login-form " method="post" action="{{ route('login') }}">
+                <form class="login-form gl-login-form" method="post" action="{{ route('login') }}">
                     @csrf
                     <div class="card mb-0">
                         <div class="card-body">
-                            <div class="text-center mb-3">
-                                <i class="icon-people icon-2x text-warning-400 border-warning-400 border-3 rounded-round p-3 mb-3 mt-1"></i>
-                                <h5 class="mb-0">Login to your account</h5>
-                                <span class="d-block text-muted">Your credentials</span>
+                            <div class="text-center mb-4">
+                                <img src="{{ asset('global_assets/images/grid-logic-badge.png') }}" class="gl-login-logo mb-3" alt="Grid & Logic logo">
+                                <h5 class="mb-1">Welcome back</h5>
+                                <span class="d-block text-muted">Sign in to your school workspace</span>
                             </div>
 
                                 @if ($errors->any())

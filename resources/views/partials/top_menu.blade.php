@@ -1,7 +1,11 @@
 <div class="navbar navbar-expand-md navbar-dark">
-    <div class="mt-2 mr-5">
-        <a href="{{ route('dashboard') }}" class="d-inline-block">
-        <h4 class="text-bold text-white">{{ Qs::getSystemName() }}</h4>
+    <div class="gl-brand-wrap">
+        <a href="{{ route('dashboard') }}" class="gl-brand-lockup">
+            <img src="{{ asset('global_assets/images/grid-logic-badge.png') }}" class="gl-brand-logo" alt="Grid & Logic logo">
+            <span class="gl-brand-copy">
+                <strong>{{ Qs::getSystemName() }}</strong>
+                <small>School Management System</small>
+            </span>
         </a>
     </div>
   {{--  <div class="navbar-brand">

@@ -14,4 +14,9 @@ important
 _ide_helper.php
 storage
 .phpstorm.meta.php
+
+# Generated Laravel Mix output
+/public/css
+/public/js
+/public/mix-manifest.json
 .editorconfig

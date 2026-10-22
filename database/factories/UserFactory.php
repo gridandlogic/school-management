@@ -28,7 +28,7 @@ class UserFactory extends Factory
         $user_type = Qs::getStaff(['super_admin', 'librarian'])[rand(0,2)];
 
         return [
-            'name' => $this->faker->name,
+            'name' => $this->faker->firstName.' '.$this->faker->lastName,
             'email' => $this->faker->safeEmail,
             'username' => $this->faker->userName,
             'password' => Hash::make($user_type),

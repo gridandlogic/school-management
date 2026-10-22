@@ -16,6 +16,14 @@
     <!-- Sidebar content -->
     <div class="sidebar-content">
 
+        <div class="gl-sidebar-brand">
+            <img src="{{ asset('global_assets/images/grid-logic-badge.png') }}" alt="Grid & Logic logo">
+            <div>
+                <strong>{{ Qs::getSystemName() }}</strong>
+                <span>School Management</span>
+            </div>
+        </div>
+
         <!-- User menu -->
         <div class="sidebar-user">
             <div class="card-body">

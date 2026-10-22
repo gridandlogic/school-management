@@ -1,0 +1,428 @@
+:root {
+    --gl-navy: #0b1b2b;
+    --gl-navy-deep: #071522;
+    --gl-cyan: #08cbd5;
+    --gl-cyan-dark: #08aeb9;
+    --gl-ink: #142b3a;
+    --gl-muted: #6e818e;
+    --gl-line: #e4edf2;
+    --gl-page: #f4f8fa;
+}
+
+body {
+    background: var(--gl-page);
+    color: var(--gl-ink);
+}
+
+.navbar-dark {
+    background-color: var(--gl-navy) !important;
+}
+
+.navbar-dark .navbar-nav-link:hover,
+.navbar-dark .navbar-nav-link:focus,
+.navbar-dark .show > .navbar-nav-link {
+    background-color: rgba(8, 203, 213, .12);
+}
+
+.gl-brand-wrap {
+    margin: .45rem 2rem .45rem 0;
+}
+
+.gl-brand-lockup {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    gap: .7rem;
+}
+
+.gl-brand-lockup:hover,
+.gl-brand-lockup:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.gl-brand-logo {
+    display: block;
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(8, 203, 213, .25);
+}
+
+.gl-brand-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.gl-brand-copy strong {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+}
+
+.gl-brand-copy small {
+    color: rgba(231, 247, 250, .68);
+    font-size: .66rem;
+    letter-spacing: .07em;
+    margin-top: .22rem;
+    text-transform: uppercase;
+}
+
+.sidebar-dark.sidebar-main {
+    background-color: var(--gl-navy-deep);
+}
+
+.sidebar-dark .card:not([class*=bg-]):not(.fixed-top) {
+    background-color: transparent;
+}
+
+.gl-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin: .9rem .9rem .35rem;
+    padding: .7rem .8rem .9rem;
+    border-bottom: 1px solid rgba(225, 244, 248, .1);
+}
+
+.gl-sidebar-brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.gl-sidebar-brand div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.gl-sidebar-brand strong {
+    color: #fff;
+    font-size: .9rem;
+}
+
+.gl-sidebar-brand span {
+    color: rgba(225, 244, 248, .58);
+    font-size: .69rem;
+    margin-top: .14rem;
+}
+
+.sidebar-dark .nav-sidebar > .nav-item > .nav-link.active {
+    background: rgba(8, 203, 213, .16);
+    color: #4ce6ec;
+}
+
+.sidebar-dark .nav-sidebar > .nav-item > .nav-link:hover,
+.sidebar-dark .nav-sidebar > .nav-item > .nav-link:focus {
+    background: rgba(255, 255, 255, .06);
+}
+
+.sidebar-dark .nav-sidebar > .nav-item > .nav-link.active:hover {
+    background: rgba(8, 203, 213, .2);
+}
+
+.gl-dashboard {
+    padding-bottom: .5rem;
+}
+
+.gl-dashboard-hero {
+    align-items: center;
+    background: linear-gradient(118deg, #0b1b2b 0%, #12374c 100%);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(9, 38, 55, .12);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    min-height: 178px;
+    overflow: hidden;
+    padding: 1.8rem 2rem;
+    position: relative;
+}
+
+.gl-dashboard-hero:after {
+    border: 1px solid rgba(8, 203, 213, .18);
+    border-radius: 50%;
+    content: "";
+    height: 260px;
+    position: absolute;
+    right: 7%;
+    top: -125px;
+    width: 260px;
+}
+
+.gl-dashboard-hero h2 {
+    color: #fff;
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    font-weight: 700;
+    margin: .5rem 0 .4rem;
+}
+
+.gl-dashboard-hero p,
+.gl-quick-panel p {
+    color: rgba(235, 248, 250, .7);
+    margin: 0;
+}
+
+.gl-eyebrow {
+    color: #54e2e7;
+    font-size: .67rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.gl-dashboard-mark {
+    border: 1px solid rgba(8, 203, 213, .38);
+    border-radius: 50%;
+    height: 94px;
+    margin-right: 1.2rem;
+    position: relative;
+    width: 94px;
+    z-index: 1;
+}
+
+.gl-stat-card {
+    background: #fff;
+    border: 1px solid var(--gl-line);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(19, 47, 63, .035);
+    color: var(--gl-ink);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 174px;
+    padding: 1.15rem 1.2rem;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.gl-stat-icon {
+    align-items: center;
+    background: #e6fbfc;
+    border-radius: 11px;
+    color: var(--gl-cyan-dark);
+    display: inline-flex;
+    font-size: 1.1rem;
+    height: 38px;
+    justify-content: center;
+    margin-bottom: .8rem;
+    width: 38px;
+}
+
+.gl-stat-label {
+    color: var(--gl-muted);
+    font-size: .78rem;
+}
+
+.gl-stat-card > strong {
+    color: var(--gl-navy);
+    font-size: 1.8rem;
+    line-height: 1.15;
+    margin-top: .16rem;
+}
+
+.gl-stat-note {
+    color: #91a0aa;
+    font-size: .71rem;
+    margin-top: .35rem;
+}
+
+.gl-quick-panel {
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--gl-line);
+    border-radius: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: space-between;
+    margin-top: .25rem;
+    padding: 1.25rem 1.5rem;
+}
+
+.gl-calendar-card {
+    border: 1px solid var(--gl-line);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(19, 47, 63, .035);
+    margin-top: 1.15rem;
+    overflow: hidden;
+}
+
+.gl-calendar-card .card-header {
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid var(--gl-line);
+    min-height: 72px;
+}
+
+.gl-calendar-card .card-title {
+    color: var(--gl-navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.gl-quick-panel h3 {
+    color: var(--gl-navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: .25rem 0 .2rem;
+}
+
+.gl-quick-panel p {
+    color: var(--gl-muted);
+    font-size: .8rem;
+}
+
+.gl-eyebrow-light {
+    color: var(--gl-cyan-dark);
+}
+
+.gl-quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+}
+
+.gl-btn-primary {
+    background: var(--gl-cyan-dark);
+    border-color: var(--gl-cyan-dark);
+    color: #fff;
+}
+
+.gl-btn-primary:hover,
+.gl-btn-primary:focus {
+    background: #078f99;
+    border-color: #078f99;
+    color: #fff;
+}
+
+.gl-btn-light {
+    background: #f4f8fa;
+    border-color: var(--gl-line);
+    color: var(--gl-ink);
+}
+
+.gl-btn-light:hover,
+.gl-btn-light:focus {
+    background: #e8f6f7;
+    border-color: #bdecef;
+    color: var(--gl-navy);
+}
+
+.login-cover {
+    background-position: center;
+    min-height: calc(100vh - 118px);
+    position: relative;
+}
+
+.login-cover:before {
+    background: linear-gradient(115deg, rgba(5, 18, 31, .78), rgba(5, 32, 46, .5));
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.login-cover > .content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.gl-login-form .card {
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(2, 15, 27, .24);
+    overflow: hidden;
+}
+
+.gl-login-form .card-body {
+    padding: 2rem;
+}
+
+.gl-login-logo {
+    border-radius: 50%;
+    height: 74px;
+    width: 74px;
+}
+
+.gl-login-form h5 {
+    color: var(--gl-navy);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.gl-login-form .form-control {
+    border-radius: 8px;
+    min-height: 43px;
+}
+
+.gl-login-form .form-control:focus {
+    border-color: var(--gl-cyan-dark);
+    box-shadow: 0 0 0 .15rem rgba(8, 174, 185, .14);
+}
+
+.gl-login-form .btn-primary {
+    background: var(--gl-cyan-dark);
+    border-color: var(--gl-cyan-dark);
+    border-radius: 8px;
+    font-weight: 600;
+    padding: .7rem 1rem;
+}
+
+.gl-login-form .btn-primary:hover,
+.gl-login-form .btn-primary:focus {
+    background: #078f99;
+    border-color: #078f99;
+}
+
+.gl-login-form a {
+    color: var(--gl-cyan-dark);
+}
+
+.gl-login-form .btn-primary,
+.gl-login-form .btn-primary:hover,
+.gl-login-form .btn-primary:focus {
+    color: #fff;
+}
+
+@media (max-width: 575.98px) {
+    .gl-brand-wrap {
+        margin-right: .5rem;
+    }
+
+    .gl-brand-logo {
+        height: 37px;
+        width: 37px;
+    }
+
+    .gl-brand-copy strong {
+        font-size: .88rem;
+    }
+
+    .gl-brand-copy small {
+        font-size: .58rem;
+    }
+
+    .gl-dashboard-hero {
+        min-height: 156px;
+        padding: 1.35rem;
+    }
+
+    .gl-dashboard-mark {
+        height: 62px;
+        margin-right: 0;
+        width: 62px;
+    }
+
+    .gl-quick-panel {
+        align-items: flex-start;
+        padding: 1.1rem;
+    }
+
+    .gl-quick-actions {
+        width: 100%;
+    }
+}
