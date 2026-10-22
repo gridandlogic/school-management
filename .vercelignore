@@ -1,0 +1,16 @@
+.git
+.vercel
+.next
+node_modules
+.env
+.env.*
+AGENTS.md
+vendor
+storage
+bootstrap
+public/css
+public/js
+public/mix-manifest.json
+public/hot
+public/storage
+*.log

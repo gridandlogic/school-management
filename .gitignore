@@ -6,6 +6,7 @@ node_modules/
 .env.*
 !.env.example
 /AGENTS.md
+/.vercel/
 
 # Local runtime files from the previous application
 /vendor/
